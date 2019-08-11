@@ -1,0 +1,12 @@
+name = Disable user email
+description = disable the user email field in the user profile form
+version = 0.1
+package = Boat Register
+core = 7.x
+files[] = disable_user_email.module
+
+; Information added by drupal.org packaging script on 2014-02-26
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "boat register"
+datestamp = "1381053291"

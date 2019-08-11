@@ -1,0 +1,12 @@
+<?php
+/**
+ *  Implements hook_form_alter().
+ */
+function disable_user_email_form_alter(&$form, &$form_state, $form_id) {
+
+  if ($form_id == 'user_profile_form' ) { //NOTE: Could add a role/permission check here before disabling the mail field
+  //dsm( $form['account']['mail']['#description']);
+  $form['account']['mail']['#description'] = 'This is the email address which the OGA holds for your membership. It cannot be edited here. <br /> If this has changed or you wish to use a different address please notify the <a href="mailto:membership@oga.org.uk?subject=Change%20of%20email%20address">Membership Secretary.</a>';
+    $form['account']['mail']['#disabled'] = true;
+  }
+}
